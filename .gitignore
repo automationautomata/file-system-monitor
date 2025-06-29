@@ -1,0 +1,8 @@
+**/.vscode
+**/.venv
+output
+**/dist
+__pycache__
+*.pyd
+*.pyc
+.ruff_cache

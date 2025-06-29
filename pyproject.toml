@@ -1,0 +1,17 @@
+[tool.poetry]
+name = "pyfsmonitor"
+version = "0.1.1"
+description = ""
+authors = []
+license = "GNU LGPL 2.1"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+
+[tool.poetry.build]
+script = "build.py"
+generate-setup-file = true
+
+[build-system]
+requires = ["poetry-core", 'setuptools', "meson"]
+build-backend = "poetry.core.masonry.api"

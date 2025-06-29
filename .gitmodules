@@ -1,0 +1,3 @@
+[submodule "external/hashmap.c"]
+	path = external/hashmap.c
+	url = https://github.com/tidwall/hashmap.c.git
