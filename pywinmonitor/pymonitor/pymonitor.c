@@ -6,11 +6,7 @@
 #include <Python.h>
 #include <objimpl.h>
 
-#define STRINGIFY(A) #A
-#define CONCAT(A, B) A##B
-#define MONITOR_NAME monitor
-
-#include "monitor/fsmonitor.h"
+#include "fsmonitor.h"
 
 
 
@@ -96,12 +92,7 @@ static PyObject *fs_entries(PyObject *self, PyObject *args) {
     return fs_entries;
 }
 
-// static PyObject *pppp(PyObject *self, PyObject *args) {
-//     printf("HELLO HELLO HELLO\n");
-//     return Py_None;
-// }
-
-static PyMethodDef CONCAT(MONITOR_NAME, _methods)[] = {
+static PyMethodDef pymonitor_methods[] = {
     // Method definition structure
     {"start_monitor",   start_monitor,   METH_VARARGS, "start monitor thread"},
     {"add_file_event",  add_fs_event,    METH_VARARGS, "Add "},
@@ -113,21 +104,17 @@ static PyMethodDef CONCAT(MONITOR_NAME, _methods)[] = {
 };
 
 // Module definition to register the module
-static struct PyModuleDef MONITOR_NAME = {
+static struct PyModuleDef pymonitor = {
     PyModuleDef_HEAD_INIT,
-    
-    STRINGIFY(MONITOR_NAME), // Module name
-    STRINGIFY(MONITOR_NAME) " documantation",             // Module documentation
+    "pymonitor", // Module name
+    "pymonitor documantation",             // Module documentation
     -1,               // Size of per-interpreter state
-    CONCAT(MONITOR_NAME, _methods), 
+    pymonitor_methods, 
     NULL,
-    NULL, 
-    NULL, 
-    NULL
 };  
 
 // Module initialization
-PyMODINIT_FUNC CONCAT(PyInit_, MONITOR_NAME)(void) {
+PyMODINIT_FUNC PyInit_pymonitor(void) {
     // printf("MODULE WORKS\n");
-    return PyModule_Create(&win_monitor);
+    return PyModule_Create(&pymonitor);
 }

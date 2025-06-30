@@ -3,7 +3,7 @@
 #include <stdlib.h>
 #include <string.h>
 
-#include "tools/kvmap.h"
+#include "kvmap.h"
 
 int compare(const void *a, const void *b, void *udata) {
     const key_value *kva = a;

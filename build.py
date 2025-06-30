@@ -3,18 +3,19 @@
 from setuptools import Extension
 from setuptools.command.build_ext import build_ext
 
+
 extensions = [
     Extension(
-        name="pyfsmonitor.monitor",
+        name="pywinmonitor.pymonitor",
         sources=[
-            "pyfsmonitor/tools/kvmap.c",
-            "pyfsmonitor/monitor/fsmonitor.c",
-            "pyfsmonitor/pywinmonitor.c",
-            "external/hashmap.c/hashmap.c",
+            "./external/hashmap.c/hashmap.c",
+            "./pywinmonitor/pymonitor/kvmap.c",
+            "./pywinmonitor/pymonitor/fsmonitor.c",
+            "./pywinmonitor/pymonitor/pymonitor.c",
         ],
-        include_dirs=["pyfsmonitor", "external/hashmap.c"],
+        include_dirs=["./external/hashmap.c", "./pywinmonitor/pymonitor"],
         language="c",
-    ),
+    )
 ]
 
 

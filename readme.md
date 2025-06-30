@@ -1,11 +1,7 @@
-# PYTHON FILESYSTEM MONITOR
+# PYTHON FILESYSTEM MONITOR FOR WINDOWS
 Handle files and folders events with a callbacks
-
-## Windows 
 Based on WinAPI (*ReadDirectoryChangesW* and *IoCompletionPort*)
 
-## Linux 
-Based on inotify
 
 #### How to Build
 ```

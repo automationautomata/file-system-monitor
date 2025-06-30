@@ -1,7 +1,8 @@
 **/.vscode
 **/.venv
 output
-**/dist
+dist
+build
 __pycache__
 *.pyd
 *.pyc

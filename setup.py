@@ -2,12 +2,12 @@
 from setuptools import setup
 import build
 
-packages = ["pyfsmonitor"]
+packages = ["pywinmonitor"]
 
 package_data = {"": ["*"]}
 
 setup_kwargs = {
-    "name": "pyfsmonitor",
+    "name": "pywinmonitor",
     "version": "0.1.1",
     "description": "",
     "long_description": "None",

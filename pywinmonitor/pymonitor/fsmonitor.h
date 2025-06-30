@@ -8,7 +8,7 @@
 #include <stdbool.h>
 #include <string.h>
 
-#include "tools/kvmap.h"
+#include "kvmap.h"
 
 #ifndef FILEMONITOR_H
 #define FILEMONITOR_H

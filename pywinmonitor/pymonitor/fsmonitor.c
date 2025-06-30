@@ -1,4 +1,4 @@
-#include "monitor/fsmonitor.h"
+#include "fsmonitor.h"
 
 
 static bool closeFSEntries(const void *item, void *udata);
